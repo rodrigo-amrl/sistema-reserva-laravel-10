@@ -7,12 +7,18 @@ use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::match(['post', 'get'], 'login', [AuthenticationController::class, 'login']);
+
+Route::get('login', [AuthenticationController::class, 'index'])->name('login');
+Route::post('autenticacao', [AuthenticationController::class, 'autenticar'])->name('autenticar');
 Route::get('logout', [AuthenticationController::class, 'logout']);
 
-Route::resource('salas', SalaController::class)->names('sala');
-Route::resource('usuarios', UsuarioController::class)->names('usuario');
-Route::resource('reservas', ReservaController::class)->names('reserva');
+Route::middleware('auth')->group(function () {
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::resource('salas', SalaController::class)->names('sala');
+    Route::resource('usuarios', UsuarioController::class)->names('usuario');
+    Route::resource('reservas', ReservaController::class)->names('reserva');
+});
