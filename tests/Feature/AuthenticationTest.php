@@ -2,19 +2,19 @@
 
 namespace Tests\Feature;
 
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
+    public function test_login(): void
     {
-        $response = $this->get('/');
+        $usuario = Usuario::factory()->create();
+        $response = $this->post('login', ['email' => $usuario->email, 'senha' => 'password']);
 
-        $response->assertStatus(200);
+        $response->assertRedirect('inicio');
+        $usuario->delete();
     }
 }

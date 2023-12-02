@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User;
 
-class Usuario extends Model
+class Usuario extends User
 {
     use HasFactory;
 
@@ -16,4 +16,8 @@ class Usuario extends Model
         'tipo',
         'status'
     ];
+    public function getAuthPassword()
+    {
+        return $this->senha;
+    }
 }
