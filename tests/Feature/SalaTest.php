@@ -11,7 +11,7 @@ class SalaTest extends TestCase
 
     public function test_create_sala(): void
     {
-        $response = $this->get('/');
+        $response = $this->post('salas');
 
         $response->assertStatus(200);
     }
