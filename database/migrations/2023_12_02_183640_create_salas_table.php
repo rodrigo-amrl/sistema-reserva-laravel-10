@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nome');
             $table->integer('capacidade');
             $table->text('descricao');
-            $table->enum('status', StatusPadrao::getValues());
+            $table->enum('status', StatusPadrao::getValues())->default(StatusPadrao::Ativo->value);
             $table->timestamps();
         });
     }

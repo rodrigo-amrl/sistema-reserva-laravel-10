@@ -23,7 +23,7 @@ class SalaController extends Controller
     public function store(SalaRequest $request)
     {
         $sala =  $this->repository->create($request->all());
-        return redirect()->route('salas.show', $sala->id);
+        return redirect()->route('sala.show', $sala->id);
     }
     public function show(string $id)
     {

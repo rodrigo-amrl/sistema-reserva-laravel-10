@@ -2,8 +2,7 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Sala;
 use Tests\TestCase;
 
 class SalaTest extends TestCase
@@ -11,8 +10,12 @@ class SalaTest extends TestCase
 
     public function test_create_sala(): void
     {
-        $response = $this->post('salas');
+        $sala = Sala::factory()->make();
 
-        $response->assertStatus(200);
+        $response = $this->post('salas', $sala->toArray());
+
+        $response->assertRedirectContains('salas/');
+        $this->assertDatabaseHas('salas', ['nome' => $sala->nome]);
+        Sala::where('nome', $sala->nome)->delete();
     }
 }

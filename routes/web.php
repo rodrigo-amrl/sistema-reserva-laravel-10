@@ -10,6 +10,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('salas', SalaController::class);
-Route::resource('usuarios', UsuarioController::class);
-Route::resource('reservas', ReservaController::class);
+Route::resource('salas', SalaController::class)->names('sala');
+Route::resource('usuarios', UsuarioController::class)->names('usuario');
+Route::resource('reservas', ReservaController::class)->names('reserva');

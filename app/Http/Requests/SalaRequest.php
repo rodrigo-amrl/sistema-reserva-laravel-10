@@ -9,7 +9,7 @@ class SalaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|max:100|min:10',
+            'nome' => 'required|max:100',
             'capacidade' => 'required|integer',
             'descricao' => 'required'
         ];

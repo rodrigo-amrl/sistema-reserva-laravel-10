@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ReservaFactory extends Factory
 {
 
+
     public function definition(): array
     {
         $data_hora_inicio  = fake()->dateTime();
