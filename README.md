@@ -1,2 +1,2 @@
-# Sistema de Reserva com Laravel 10
+# Sistema de Reserva de Salas com Laravel 10
 
