@@ -18,6 +18,7 @@ class Sala extends Model
     protected $fillable = [
         'nome',
         'capacidade',
+        'status',
         'descricao'
     ];
 }

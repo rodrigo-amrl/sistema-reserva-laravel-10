@@ -10,8 +10,11 @@ class Reserva extends Model
 {
     use HasFactory;
 
-    public static function newFactory()
-    {
-        return ReservaFactory::new();
-    }
+    protected $fillable = [
+        'sala_id',
+        'usuario_id',
+        'data_hora_inicio',
+        'data_hora_fim',
+        'status_reserva'
+    ];
 }

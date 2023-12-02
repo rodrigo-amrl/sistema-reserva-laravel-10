@@ -2,23 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsuarioRequest;
+use App\Repositories\UsuarioRepository;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
+    public function __construct(protected UsuarioRepository $repository)
+    {
+    }
     public function index()
     {
         return view('sala.index');
     }
 
-
     public function create()
     {
         return view('sala.create');
     }
-    public function store(Request $request)
+    public function store(UsuarioRequest $request)
     {
-        return redirect();
+        $usuario =  $this->repository->create($request->all());
+        return redirect()->route('usuario.show', $usuario->id);
     }
     public function show(string $id)
     {

@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\StatusPadrao;
+use App\Enums\TipoUsuario;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('email', 100);
             $table->string('senha', 100);
+            $table->enum('tipo', TipoUsuario::getValues());
             $table->enum('status', StatusPadrao::getValues())->default(StatusPadrao::Ativo->value);
             $table->timestamps();
         });
