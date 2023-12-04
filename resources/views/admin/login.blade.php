@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://www.bootstrap.gallery/">
     <meta property="og:url" content="https://www.bootstrap.gallery">
     <meta property="og:title" content="Admin Templates - Dashboard Templates | Bootstrap Gallery">
-    <meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
+    <meta property="og:description" content="sMarketplace for Bootstrap Admin Dashboards">
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Bootstrap Gallery">
     <link rel="shortcut icon" href="img/favicon.svg" />
@@ -24,10 +24,10 @@
    ************ Common Css Files *************
   ************ -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" />
 
     <!-- Master CSS -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/theme/css/main.css" />
 
 </head>
 
@@ -42,7 +42,7 @@
                     <div class="login-screen">
                         <div class="login-box">
                             <a href="#" class="login-logo">
-                                <img src="img/logo-dark.svg" alt="Best Admin Template" />
+                                <img src="/theme/img/logo-dark.svg" alt="Best Admin Template" />
                             </a>
                             <h5>Welcome back,<br />Please Login to your Account.</h5>
                             <div class="form-group">
