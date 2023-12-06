@@ -1,1 +1,14 @@
 @import "bootstrap/scss/bootstrap";
+@import "./theme/main.scss";
+@import "../fonts/theme/style.css";
+
+.page-wrapper .sidebar-wrapper .sidebar-brand .logo {
+    color: #ffff;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.header-actions > li > a.user-settings .icon-user1 {
+    font-size: 22px !important;
+    line-height: inherit;
+}
