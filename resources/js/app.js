@@ -2,7 +2,7 @@ import './bootstrap';
 import * as bootstrap from 'bootstrap'
 
 import jQuery from "jquery";
-window.jQuery = window.$ = $
+window.jQuery = window.$ = jQuery
 
 import moment from 'moment';
 window.moment = moment;
@@ -14,7 +14,7 @@ window.toast = toast;
 import ApexCharts from 'apexcharts'
 window.ApexCharts = ApexCharts;
 
-import "./theme/main"
+
 
 
 

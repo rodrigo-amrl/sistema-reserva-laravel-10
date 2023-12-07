@@ -3,12 +3,9 @@
 use App\Http\Controllers\Cliente\AuthenticationController;
 use App\Http\Controllers\Cliente\HomeController;
 use App\Http\Controllers\Cliente\ReservaController;
-use App\Http\Controllers\SalaController;
 use App\Http\Controllers\Cliente\UsuarioController;
-use App\Http\Controllers\Admin;
+use App\Http\Controllers\SalaController;
 use Illuminate\Support\Facades\Route;
-
-
 
 
 Route::get('login', [AuthenticationController::class, 'index'])->name('login');
@@ -34,7 +31,7 @@ Route::resource('reservas', ReservaController::class)->names('reserva');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
-        return   view('admin.home');
+        return   view('home');
     });
     Route::get('login', [Admin\AuthenticationController::class, 'index'])->name('login');
     Route::post('autenticacao', [Admin\AuthenticationController::class, 'autenticar'])->name('autenticar');

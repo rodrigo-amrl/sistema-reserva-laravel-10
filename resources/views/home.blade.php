@@ -3,7 +3,7 @@
     <div class="page-header">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item active">Admin Dashboard</li>
+            <li class="breadcrumb-item active">Dashboard</li>
         </ol>
     </div>
     <div class="main-container">
@@ -134,12 +134,7 @@
     </div>
 @endsection
 @push('scripts')
-    <script src="/theme/js/jquery.min.js"></script>
-
-    <script type="module" src="/theme/vendor/slimscroll/slimscroll.min.js"></script>
-    <script type="module" src="/theme/vendor/slimscroll/custom-scrollbar.js"></script>
-
-    <!-- Apex Charts -->
-    <script src="/theme/vendor/apex/apexcharts.min.js"></script>
-    <script src="/theme/vendor/apex/admin/customers.js"></script>
+    <script type="module" src="{{ asset('/theme/vendor/slimscroll/slimscroll.min.js') }}"></script>
+    <script type="module" src="{{ asset('/theme/vendor/slimscroll/custom-scrollbar.js') }}"></script>
+    <script type="module" src="{{ asset('/theme/vendor/apex/admin/customers.js') }}"></script>
 @endpush
